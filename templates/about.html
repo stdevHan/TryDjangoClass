@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>About Pages</h1>
+    <p>{{ my_text }}</p>
+    <p>{{ my_number }}</p>
+    <p>{{ my_list }}</p>
+
+    <ul>
+        {% for abc in my_list %}
+            {% if abc == 312 %}
+                <li>Item #{{ forloop.counter }} - {{ abc|add:22 }}</li>
+            {% elif abc == "Abc" %}
+                <li>Not number</li>
+            {% else %}
+                <li>Item #{{ forloop.counter }} - {{ abc }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
