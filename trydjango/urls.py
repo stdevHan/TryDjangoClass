@@ -23,6 +23,7 @@ urlpatterns = [
     path('contact/', contact_view, name='contact'),
     path('about/', about_view, name='about'),
     path('social/', social_view, name='social'),
+    path('create/', product_create_view, name='product_create'),
     path('product/', product_detail_view, name='product_detail'),
     path('admin/', admin.site.urls),
 ]
